@@ -171,14 +171,10 @@ class RomanticAudioController {
     } catch {}
   }
 
-  // Candidate paths where user may place audio.mp3
+  // Candidate paths where user may place audio.mp3 (standard: /assets/audio/audio.mp3)
   private candidateAudioUrls = [
-    '/assest/audio/audio.mp3',
     '/assets/audio/audio.mp3',
-    '/assests/audio/audio.mp3',
-    '/assest/audio.mp3',
     '/assets/audio.mp3',
-    '/assests/audio.mp3',
     '/audio.mp3',
   ];
 

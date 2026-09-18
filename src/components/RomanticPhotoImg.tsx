@@ -27,20 +27,14 @@ export const RomanticPhotoImg: React.FC<RomanticPhotoImgProps> = ({
 
     if (index !== undefined && index > 0) {
       return [
-        // Standard user upload targets in assets & assest folders
+        // Standard user upload target in assets/images/
         `/assets/images/${index}.jpeg`,
-        `/assest/images/${index}.jpeg`,
-        `/assests/images/${index}.jpeg`,
         `/assets/images/${index}.jpg`,
-        `/assest/images/${index}.jpg`,
-        `/assests/images/${index}.jpg`,
         `/assets/images/${index}.png`,
-        `/assest/images/${index}.png`,
-        `/assests/images/${index}.png`,
+        `/assets/images/${index}.webp`,
         // Also support filenames with space after period "1. jpeg"
         `/assets/images/${index}. jpeg`,
-        `/assest/images/${index}. jpeg`,
-        `/assests/images/${index}. jpeg`,
+        `/assets/images/${index}. jpg`,
         // Fallback to provided src or fallbackSrc
         src || '',
         fallbackSrc || '',
