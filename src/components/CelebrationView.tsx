@@ -86,9 +86,31 @@ export const CelebrationView: React.FC<CelebrationViewProps> = ({ partner, onNav
 
   useEffect(() => {
     const calculateTime = () => {
-      const start = new Date(partner.anniversaryDate).getTime();
-      const now = new Date().getTime();
-      const diff = Math.max(0, now - start);
+      const now = new Date();
+      
+      // Relationship anniversary: 16th May of this year
+      let month = 4; // May (0-indexed: 4 is May)
+      let day = 16;
+      
+      if (partner.anniversaryDate) {
+        const parts = partner.anniversaryDate.split('-');
+        if (parts.length === 3) {
+          month = parseInt(parts[1], 10) - 1;
+          day = parseInt(parts[2], 10);
+        }
+      }
+
+      // If the anniversary date in this current year has passed, start from this year; otherwise from previous year
+      let anniversaryYear = now.getFullYear();
+      const anniversaryThisYear = new Date(now.getFullYear(), month, day, 0, 0, 0);
+      if (now.getTime() < anniversaryThisYear.getTime()) {
+        anniversaryYear = now.getFullYear() - 1;
+      } else {
+        anniversaryYear = now.getFullYear();
+      }
+
+      const start = new Date(anniversaryYear, month, day, 0, 0, 0).getTime();
+      const diff = Math.max(0, now.getTime() - start);
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
