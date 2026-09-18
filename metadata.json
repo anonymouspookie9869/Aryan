@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Anmol - Forever & Always",
+  "description": "A personalized birthday and memories celebration website for Anmol, featuring their milestones from January 4th, February 13th, May 16th, and August 6th, plus interactive fast food birthday treats, timeline, love letters, and games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

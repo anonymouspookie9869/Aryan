@@ -1,0 +1,678 @@
+import { AppDataState } from '../types';
+
+export const initialData: AppDataState = {
+  partner: {
+    girlfriendName: "Anmol",
+    clientName: "Aryan",
+    nickname: "Anmol / Meri Jaan",
+    birthdayDate: "2026-09-19",
+    anniversaryDate: "2024-05-16",
+    specialSongTitle: "Raataan Lambiyan & Kesariya",
+    specialSongArtist: "Our Endless Love Story",
+    heroTagline: "From our first chat on January 4th to our first bike ride on August 6th, every moment with you is Anmol (priceless). Happy 19th September Birthday!",
+    personalLoveNote: "Happy Birthday Anmol! 4 January ko pehli baar baat karne se lekar 13 February ko pehli date, 16 May ko officially relationship mein aane tak, aur 6 August ki pehli bike ride se lekar aaj tak—har ek lamha tumhare saath sabse khoobsurat raha hai. Mujhe pata hai tumhe mitha nahi, fast food pasand hai, isliye aaj tumhare liye spicy momos, loaded cheese burgers aur crispy french fries ki dawat ready hai! Love you forever & always ❤️ — Aryan"
+  },
+  photos: [
+    {
+      id: "p1",
+      photoIndex: 1,
+      url: "/assets/images/1.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80",
+      caption: "January 4th: Where it all began with a simple text",
+      date: "January 04, 2024",
+      location: "Late Night Conversations",
+      chapter: "Beginning",
+      isFavorite: true,
+      notes: "Woh 4 January ki pehli baat jisne meri poori zindagi ko roshan kar diya.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p2",
+      photoIndex: 2,
+      url: "/assets/images/2.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80",
+      caption: "February 13th: Our first time going out together",
+      date: "February 13, 2024",
+      location: "Our First Date",
+      chapter: "Beginning",
+      isFavorite: true,
+      notes: "Valentine's Day se theek ek din pehle hamara pehla date. Walking beside you felt like a dream.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p3",
+      photoIndex: 3,
+      url: "/assets/images/3.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
+      caption: "May 16th: The day we officially became 'US'",
+      date: "May 16, 2024",
+      location: "Our Special Place",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "16 May—the official anniversary of our relationship. The best decision of my life.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p4",
+      photoIndex: 4,
+      url: "/assets/images/4.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80",
+      caption: "August 6th: Our very first bike ride together",
+      date: "August 06, 2024",
+      location: "Open Highways & Cool Breeze",
+      chapter: "Adventures",
+      isFavorite: true,
+      notes: "6 August ko pehli baar bike se ghumne gaye the. You holding onto me tight made my heart race.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p5",
+      photoIndex: 5,
+      url: "/assets/images/5.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1000&q=80",
+      caption: "Fast Food Date: Mitha No, Spicy Burgers & Fries Yes! 🍔🍟",
+      date: "Every Food Date",
+      location: "Our Favorite Food Corner",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Anmol ko mitha bilkul pasand nahi, lekin crispy burgers aur hot fries dekh kar uski aankhein chamak uthti hain!",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p6",
+      photoIndex: 6,
+      url: "/assets/images/6.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
+      caption: "September 19th Birthday Girl: Meri Anmol",
+      date: "September 19, 2026",
+      location: "Celebration Central",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "Aapke jaisa koi nahi. You are truly priceless in every single way.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p7",
+      photoIndex: 7,
+      url: "/assets/images/7.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80",
+      caption: "Your glowing smile that brightens my darkest days",
+      date: "Every Day",
+      location: "Everywhere With You",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Whenever you smile, the entire world fades into the background.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p8",
+      photoIndex: 8,
+      url: "/assets/images/8.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      caption: "Watching the sunset peacefully together",
+      date: "Weekend Getaway",
+      location: "Sunset Horizon",
+      chapter: "Adventures",
+      isFavorite: false,
+      notes: "Just you, me, and the calming colors of the evening sky.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p9",
+      photoIndex: 9,
+      url: "/assets/images/9.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1000&q=80",
+      caption: "Coffee & snacks before our long conversations",
+      date: "Special Afternoon",
+      location: "Corner Café",
+      chapter: "Beginning",
+      isFavorite: false,
+      notes: "Talking about our dreams, our families, and laughing at the silliest jokes.",
+      aspectRatio: "square"
+    },
+    {
+      id: "p10",
+      photoIndex: 10,
+      url: "/assets/images/10.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80",
+      caption: "September 19th: Celebrating the queen of my heart",
+      date: "September 19, 2026",
+      location: "Forever In My Heart",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "May this 19th September bring you endless smiles, fast food treats, and happiness.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p11",
+      photoIndex: 11,
+      url: "/assets/images/11.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80",
+      caption: "Warm hugs that make every worry disappear",
+      date: "Special Days",
+      location: "In Your Arms",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "The safest place in this whole world is right beside you.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p12",
+      photoIndex: 12,
+      url: "/assets/images/12.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=1000&q=80",
+      caption: "Late night ice cream & sweet roadside walks",
+      date: "Midnight Magic",
+      location: "Moonlit Streets",
+      chapter: "Adventures",
+      isFavorite: false,
+      notes: "Walking under the streetlights and laughing without a care in the world.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p13",
+      photoIndex: 13,
+      url: "/assets/images/13.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80",
+      caption: "Holding your hand tight everywhere we go",
+      date: "Every Day",
+      location: "City Streets",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Fingers intertwined, heart at peace.",
+      aspectRatio: "square"
+    },
+    {
+      id: "p14",
+      photoIndex: 14,
+      url: "/assets/images/14.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80",
+      caption: "Your goofy laughs that are completely contagious",
+      date: "Unscripted Candids",
+      location: "Our Happy Place",
+      chapter: "Beginning",
+      isFavorite: true,
+      notes: "When you laugh from your heart, you look effortlessly stunning.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p15",
+      photoIndex: 15,
+      url: "/assets/images/15.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1000&q=80",
+      caption: "Steaming hot spicy momos date together 🥟",
+      date: "Street Food Nights",
+      location: "Corner Stalls",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Extra spicy red chutney and two plates of steaming momos!",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p16",
+      photoIndex: 16,
+      url: "/assets/images/16.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80",
+      caption: "Golden hour glow on your beautiful face",
+      date: "Golden Evenings",
+      location: "Rooftop Views",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "The golden sun highlighting how perfect you are.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p17",
+      photoIndex: 17,
+      url: "/assets/images/17.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
+      caption: "Wind in your hair on highway bike rides",
+      date: "Road Trips",
+      location: "Long Highways",
+      chapter: "Adventures",
+      isFavorite: false,
+      notes: "The feeling of freedom and pure happiness riding together.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p18",
+      photoIndex: 18,
+      url: "/assets/images/18.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1000&q=80",
+      caption: "Deep talks under starry night skies",
+      date: "Quiet Nights",
+      location: "Under The Stars",
+      chapter: "Beginning",
+      isFavorite: true,
+      notes: "Sharing our deepest dreams and promises.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p19",
+      photoIndex: 19,
+      url: "/assets/images/19.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80",
+      caption: "Secret jokes only the two of us understand",
+      date: "Everyday Moments",
+      location: "Anywhere Together",
+      chapter: "Everyday Magic",
+      isFavorite: false,
+      notes: "One glance across the room and we both burst into giggles.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p20",
+      photoIndex: 20,
+      url: "/assets/images/20.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=80",
+      caption: "Cheesy loaded burgers & french fries fight! 🍟",
+      date: "Cheat Meal Days",
+      location: "Fast Food Joints",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Fighting playfully over the very last crispy fry!",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p21",
+      photoIndex: 21,
+      url: "/assets/images/21.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80",
+      caption: "Rainy day drives with our favorite playlist",
+      date: "Monsoon Memories",
+      location: "Rain Washed Roads",
+      chapter: "Adventures",
+      isFavorite: false,
+      notes: "Raindrops on the glass and singing our hearts out.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p22",
+      photoIndex: 22,
+      url: "/assets/images/22.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
+      caption: "Your eyes shining with pure joy and mischief",
+      date: "Candid Snaps",
+      location: "Special Evenings",
+      chapter: "Everyday Magic",
+      isFavorite: true,
+      notes: "Those sparkling eyes that I fell completely in love with.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p23",
+      photoIndex: 23,
+      url: "/assets/images/23.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80",
+      caption: "Little surprises that make your heart flutter",
+      date: "Surprise Days",
+      location: "Secret Spots",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "Seeing your surprised expression is my absolute favorite thing.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p24",
+      photoIndex: 24,
+      url: "/assets/images/24.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
+      caption: "Our matching smiles in unscripted photos",
+      date: "Photo Booth Snaps",
+      location: "Memory Wall",
+      chapter: "Beginning",
+      isFavorite: false,
+      notes: "Genuine smiles made of pure comfort and affection.",
+      aspectRatio: "square"
+    },
+    {
+      id: "p25",
+      photoIndex: 25,
+      url: "/assets/images/25.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+      caption: "Quiet afternoons dreaming about our future",
+      date: "Sunday Vibes",
+      location: "Cozy Corners",
+      chapter: "Everyday Magic",
+      isFavorite: false,
+      notes: "Planning all the places we'll travel and burgers we'll eat.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p26",
+      photoIndex: 26,
+      url: "/assets/images/26.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80",
+      caption: "Resting your head on my shoulder during the ride",
+      date: "Evening Rides",
+      location: "City Bypass",
+      chapter: "Adventures",
+      isFavorite: true,
+      notes: "Complete comfort and warmth on two wheels.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p27",
+      photoIndex: 27,
+      url: "/assets/images/27.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1000&q=80",
+      caption: "Shopping together and trying on silly outfits",
+      date: "Weekend Malls",
+      location: "Mall Hangouts",
+      chapter: "Beginning",
+      isFavorite: false,
+      notes: "Making ordinary shopping trips feel like an adventure.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p28",
+      photoIndex: 28,
+      url: "/assets/images/28.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80",
+      caption: "Every single picture of yours is pure elegance",
+      date: "Dressed Up",
+      location: "Celebrations",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "You always take my breath away.",
+      aspectRatio: "portrait"
+    },
+    {
+      id: "p29",
+      photoIndex: 29,
+      url: "/assets/images/29.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80",
+      caption: "Promise of a million more sunsets together",
+      date: "Golden Twilight",
+      location: "Dusk Point",
+      chapter: "Adventures",
+      isFavorite: true,
+      notes: "Hand in hand towards forever.",
+      aspectRatio: "landscape"
+    },
+    {
+      id: "p30",
+      photoIndex: 30,
+      url: "/assets/images/30.jpeg",
+      fallbackUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80",
+      caption: "Forever & Always: You are my greatest blessing",
+      date: "September 19th & Beyond",
+      location: "Forever in My Heart",
+      chapter: "Milestones",
+      isFavorite: true,
+      notes: "Happy Birthday my love, today, tomorrow and always!",
+      aspectRatio: "portrait"
+    }
+  ],
+  memories: [
+    {
+      id: "m1",
+      title: "4 January: Hamari Pehli Baat",
+      chapter: "Beginning",
+      date: "January 04, 2024",
+      location: "Late Night Texts & Sweet Beginnings",
+      lat: 28.6139,
+      lng: 77.2090,
+      story: "Woh 4 January ka din jab pehli baar hamare beech baat shuru hui thi. Ek simple se 'hello' se shuru hui baat, aur phir kab ghanto tak baatein hone lagi pata hi nahi chala. Uss din se meri zindagi mein ek aisi pyari muskaan jud gayi jo pehle kabhi nahi thi.",
+      emotionEmoji: "💌",
+      secretThought: "Mujhe baat karte hi lag gaya tha ki Anmol kitni alag, masoom aur genuine hai.",
+      photoUrl: "/assets/images/1.jpeg"
+    },
+    {
+      id: "m2",
+      title: "13 February: Pehli Baar Ghumne Gaye",
+      chapter: "Beginning",
+      date: "February 13, 2024",
+      location: "Our First Outing & Walk Together",
+      lat: 28.6328,
+      lng: 77.2197,
+      story: "Valentine's Day se theek ek din pehle, 13 February ko hum pehli baar bahar ghumne nikle the. Samne baith kar baat karna, thodi si nervousness, tumhari woh pyari si smile aur ek dusre ke saath waqt bitana. Woh shaam mere dil mein hamesha ke liye bas gayi.",
+      emotionEmoji: "🌸",
+      secretThought: "Tumhe saamne dekh kar dil itni tez dhadak raha tha ki mujhe laga tum sun logi!",
+      photoUrl: "/assets/images/2.jpeg"
+    },
+    {
+      id: "m3",
+      title: "16 May: Jab Hum Relationship Mein Aaye",
+      chapter: "Milestones",
+      date: "May 16, 2024",
+      location: "Officially Together Forever",
+      lat: 28.5244,
+      lng: 77.1855,
+      story: "16 May ko hum dono officially relationship mein aaye! Hamari kahani ka sabse bada aur khoobsurat milestone. Ek dusre ka haath pakad kar hamesha saath nibhane ka vada kiya. Anmol, uss din se lekar aaj tak har din sirf tumhara hai.",
+      emotionEmoji: "💑",
+      secretThought: "Uss din laga jaise meri saari khwahishein ek saath poori ho gayi hon.",
+      photoUrl: "/assets/images/3.jpeg"
+    },
+    {
+      id: "m4",
+      title: "6 August: Pehli Baar Bike Se Ghumne Gaye",
+      chapter: "Adventures",
+      date: "August 06, 2024",
+      location: "Open Highway & Cool Breeze",
+      lat: 28.4595,
+      lng: 77.0266,
+      story: "6 August ko hum pehli baar bike se ghumne nikle the! Khuli sadak, thandi thandi hawa, aur tumhara peeche baith kar mere shoulder par haath rakhna. Speed ke sath jab bhi turn aata tha aur tum mujhe tight pakadti thi, woh feeling lajawab thi.",
+      emotionEmoji: "🏍️",
+      secretThought: "Uss bike ride par lag raha tha kaash yeh sadak kabhi khatam na ho aur hum aise hi chalte rahein.",
+      photoUrl: "/assets/images/4.jpeg"
+    },
+    {
+      id: "m5",
+      title: "Mitha No, Fast Food Yes! 🍔🍟🍕",
+      chapter: "Everyday Magic",
+      date: "Every Food Date",
+      location: "Burger & Momos Street Food Corner",
+      lat: 28.5672,
+      lng: 77.2433,
+      story: "Anmol ko mitha bilkul pasand nahi hai, lekin spicy momos, cheese burgers, crispy French fries aur pizza ke liye uska pyaar sabse alag hai! Jab bhi fast food aata hai, Anmol ke chehre par jo khushi aati hai, woh dekh kar mera din ban jaata hai.",
+      emotionEmoji: "🍔",
+      secretThought: "Duniya ki saari mithai ek taraf, aur meri Anmol ke crispy burgers aur momos ek taraf!",
+      photoUrl: "/assets/images/5.jpeg"
+    },
+    {
+      id: "m6",
+      title: "19 September: Happy Birthday Meri Anmol! 🎂👑",
+      chapter: "Milestones",
+      date: "September 19th & Forever",
+      location: "Deep In My Heart",
+      lat: 28.6129,
+      lng: 77.2295,
+      story: "19 September—woh din jab is duniya mein meri sabse pyari Anmol aayi thi! Aaj tumhara janamdin hai, aur main chahta hu ki tum hamesha aisi hi khush raho, hasti raho aur hum dono aise hi har saal tumhara birthday dhoom-dhaam se celebrate karein.",
+      emotionEmoji: "🎂",
+      secretThought: "Happy Birthday my love. Tum sach mein Anmol ho mere liye.",
+      photoUrl: "/assets/images/6.jpeg"
+    }
+  ],
+  letters: [
+    {
+      id: "l1",
+      title: "Open on Your 19th September Birthday Morning",
+      prompt: "Open on your birthday morning with your first smile of the day",
+      sealColor: "#e11d48",
+      opened: false,
+      content: "Good morning, birthday girl Anmol! Today is 19th September—the day the most beautiful soul was born. Before the phone calls and wishes arrive, I want you to know how deeply I love and cherish you. You made my life meaningful and exciting from our very first chat on 4th January. Get ready for a day packed with love, surprises, and of course, your favorite fast food!",
+      signature: "Forever yours, Aryan ❤️"
+    },
+    {
+      id: "l2",
+      title: "Open When You Need a Reminder of How Precious You Are",
+      prompt: "Open whenever you are feeling tired, stressed, or doubting yourself",
+      sealColor: "#d97706",
+      opened: false,
+      content: "Hey Anmol, your name literally means 'priceless'—and that is exactly what you are to me. When you look in the mirror, don't just see your gorgeous smile and sparkling eyes; see the compassionate, brave, and wonderfully hilarious girl who lights up every room she walks into. I am the luckiest guy in the world to call you mine.",
+      signature: "Your biggest supporter & admirer, Aryan"
+    },
+    {
+      id: "l3",
+      title: "Open When You Want to Remember Our 6th August Bike Ride",
+      prompt: "Open when you feel the cool evening breeze and miss riding together",
+      sealColor: "#7c3aed",
+      opened: false,
+      content: "Remember 6th August? Our very first bike ride together! The open road, the cool wind brushing our faces, and the warmth of you holding onto me from behind. Every time I start the bike, I still feel that exact thrill. I promise to take you on a thousand more rides, exploring every scenic route hand in hand.",
+      signature: "Ready for our next ride, Aryan"
+    },
+    {
+      id: "l4",
+      title: "Open When You're Craving Late Night Fast Food",
+      prompt: "Open when midnight hunger strikes and you're craving something spicy & crispy",
+      sealColor: "#2563eb",
+      opened: false,
+      content: "Since my girl hates sweets and loves fast food, this letter comes with an open voucher: no matter what time it is, tell me what you want! Loaded cheese burger, spicy momos with extra red chutney, or piping hot french fries—your personal delivery guy Aryan is always on call for you!",
+      signature: "Your dedicated fast food partner 🍔🍟"
+    },
+    {
+      id: "l5",
+      title: "Open When We Have an Argument",
+      prompt: "Open if we ever misunderstand each other or bump heads",
+      sealColor: "#059669",
+      opened: false,
+      content: "First off: I'm sorry for whatever upset you. Remember that it's always you and me together against the problem, never you against me. We've built something so special since 4th January and 16th May, and my love for you never wavers. Come here, let's hug it out, eat some spicy snacks, and talk it through.",
+      signature: "Holding your hand tightly, always"
+    },
+    {
+      id: "l6",
+      title: "Open For Your Final Birthday Surprise",
+      prompt: "Open when you have explored all the pages of this website!",
+      sealColor: "#ec4899",
+      opened: false,
+      content: "Anmol, this website is just a small digital glimpse of how much you mean to me. The real celebration is happening right now in the real world! Happy Birthday to the girl who stole my heart. May this year bring you endless joy, laughter, and all your dreams fulfilled!",
+      signature: "With all my heart & soul, Aryan ❤️"
+    }
+  ],
+  coupons: [
+    {
+      id: "c1",
+      title: "Full 30-Minute Relaxing Massage",
+      category: "Pampering",
+      perk: "A peaceful shoulder, neck & head massage with calming music whenever you feel tired or stressed.",
+      redeemed: false,
+      iconName: "Sparkles"
+    },
+    {
+      id: "c2",
+      title: "Midnight Fast Food Run (Burgers & Momos) 🍔🍟",
+      category: "Cravings",
+      perk: "Valid any night! No sweet desserts—hot crispy french fries, loaded cheese burgers, or spicy momos fetched for Anmol.",
+      redeemed: false,
+      iconName: "UtensilsCrossed"
+    },
+    {
+      id: "c3",
+      title: "Romantic Bike Ride Date (6th August Vibes) 🏍️",
+      category: "Adventure",
+      perk: "You pick any road, highway, or scenic spot. Hold on tight and enjoy the cool wind on a long evening bike ride together.",
+      redeemed: false,
+      iconName: "Compass"
+    },
+    {
+      id: "c4",
+      title: "Chef Aryan: Unlimited Fast Food Feast 🍕",
+      category: "Dining",
+      perk: "Homemade crispy pizza, spicy snacks & finger food cooked to your exact taste, with 100% dishes washed by me!",
+      redeemed: false,
+      iconName: "Flame"
+    },
+    {
+      id: "c5",
+      title: "Win Any Argument Pass 👑",
+      category: "Fun & Games",
+      perk: "Present this card and Aryan instantly surrenders the debate and declares Anmol 100% right.",
+      redeemed: false,
+      iconName: "Crown"
+    },
+    {
+      id: "c6",
+      title: "A Day Where Aryan Says YES To Everything 💖",
+      category: "Milestones",
+      perk: "Anmol dictates the entire day's plan, food stops, movies, and schedule. Zero complaints, only love!",
+      redeemed: false,
+      iconName: "CheckCircle2"
+    }
+  ],
+  quiz: [
+    {
+      id: "q1",
+      question: "Hum dono ki pehli baar baat kis date ko hui thi?",
+      options: [
+        "4 January",
+        "14 February",
+        "16 May",
+        "6 August"
+      ],
+      correctIndex: 0,
+      explanation: "4 January ko pehli baar hamari baat shuru hui thi aur wahi se hamari khoobsurat kahani shuru hui!",
+      hint: "Year ka pehla month tha!"
+    },
+    {
+      id: "q2",
+      question: "Hum dono pehli baar ghumne kis din gaye the?",
+      options: [
+        "1 January",
+        "13 February",
+        "16 May",
+        "19 September"
+      ],
+      correctIndex: 1,
+      explanation: "13 February! Valentine's Day se theek ek din pehle hum pehli baar ghumne nikle the ❤️",
+      hint: "Valentine's Day se ek din pehle!"
+    },
+    {
+      id: "q3",
+      question: "Hamara official relationship / anniversary date konsa hai?",
+      options: [
+        "4 January",
+        "13 February",
+        "16 May",
+        "6 August"
+      ],
+      correctIndex: 2,
+      explanation: "16 May ko hum dono officially relationship mein aaye the! The best day ever 💑",
+      hint: "Garmiyon ka mausam tha!"
+    },
+    {
+      id: "q4",
+      question: "Hum dono pehli baar bike se ghumne kab gaye the?",
+      options: [
+        "6 August",
+        "4 January",
+        "13 February",
+        "16 May"
+      ],
+      correctIndex: 0,
+      explanation: "6 August ko hum pehli baar bike par nikle the! Thandi hawa aur tumhara tight pakadna 🏍️",
+      hint: "Monsoon ka month tha!"
+    },
+    {
+      id: "q5",
+      question: "Anmol ko khane mein kya bilkul pasand nahi hai aur kya sabse zyada pasand hai?",
+      options: [
+        "Mitha pasand hai, fast food bilkul nahi",
+        "Mitha bilkul pasand nahi, Fast Food sabse zyada pasand hai! 🍔🍟",
+        "Dono hi pasand nahi hai",
+        "Karela aur sweet dish dono pasand hai"
+      ],
+      correctIndex: 1,
+      explanation: "Mitha bilkul accha nahi lagta, lekin Fast Food (Burgers, Momos, Pizza, Fries) dekh kar chehre par 1000 watt ki smile aa jaati hai!",
+      hint: "Burgers, Momos aur Fries!"
+    }
+  ],
+  reasons: [
+    { id: "r1", number: 1, reason: "4 January ki woh pehli baat jisne meri zindagi mein nayi roshni bhar di.", category: "Milestones" as any, favorite: true },
+    { id: "r2", number: 2, reason: "13 February ko jab hum pehli baar ghumne gaye aur tumhari smile dekh kar main fida ho gaya.", category: "Milestones" as any, favorite: true },
+    { id: "r3", number: 3, reason: "16 May—the day you said yes and became officially mine.", category: "Milestones" as any, favorite: true },
+    { id: "r4", number: 4, reason: "6 August ki woh pehli bike ride jab tumne mujhe peeche se tight pakda tha.", category: "Adventures", favorite: true },
+    { id: "r5", number: 5, reason: "Mitha na pasand karna, lekin fast food dekh kar bacchon ki tarah khush ho jaana.", category: "Little Things", favorite: true },
+    { id: "r6", number: 6, reason: "Tumhari aankhein jab tum kisi baat par excited ho kar baatein karti ho.", category: "Personality", favorite: true },
+    { id: "r7", number: 7, reason: "The way your laugh instantly melts away all my stress after a long day.", category: "How You Make Me Feel", favorite: true },
+    { id: "r8", number: 8, reason: "Hum dono ka ek dusre ki plates se fries chura kar khana.", category: "Everyday Magic" as any, favorite: true },
+    { id: "r9", number: 9, reason: "Your genuine, kind and caring heart that loves so selflessly.", category: "Personality", favorite: true },
+    { id: "r10", number: 10, reason: "How beautiful you look on our bike rides with the wind in your hair.", category: "Adventures", favorite: true },
+    { id: "r11", number: 11, reason: "Your cute angry face whenever I tease you or crack silly jokes.", category: "Little Things", favorite: false },
+    { id: "r12", number: 12, reason: "Because you believe in me even when I doubt myself.", category: "How You Make Me Feel", favorite: true },
+    { id: "r13", number: 13, reason: "Your funny reactions and pure joy when crispy momos arrive at the table.", category: "Little Things", favorite: true },
+    { id: "r14", number: 14, reason: "How you hold my hand tightly whenever we are walking or on the bike.", category: "How You Make Me Feel", favorite: true },
+    { id: "r15", number: 15, reason: "19 September—because the universe gave me the greatest gift of my life: YOU.", category: "Milestones" as any, favorite: true },
+    { id: "r16", number: 16, reason: "Simply because you are my ANMOL—truly priceless, irreplaceable, and my forever.", category: "Personality", favorite: true }
+  ]
+};
