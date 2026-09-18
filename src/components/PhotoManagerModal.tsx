@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Upload, Plus, Trash2, Heart, X, Check, Image as ImageIcon, Sparkles, Settings, Calendar, User } from 'lucide-react';
 import { PhotoItem, PartnerInfo } from '../types';
 import { romanticAudio } from '../utils/romanticAudio';
+import { RomanticPhotoImg } from './RomanticPhotoImg';
 
 interface PhotoManagerModalProps {
   isOpen: boolean;
@@ -368,7 +369,13 @@ export const PhotoManagerModal: React.FC<PhotoManagerModalProps> = ({
                     className="flex items-center gap-3 p-2.5 rounded-2xl border border-pink-200 bg-pink-50/70 shadow-2xs"
                   >
                     <div className="w-14 h-14 rounded-xl overflow-hidden bg-pink-100 flex-shrink-0 border border-pink-200">
-                      <img src={photo.url} alt="" className="w-full h-full object-cover" />
+                      <RomanticPhotoImg
+                        src={photo.url}
+                        fallbackSrc={photo.fallbackUrl}
+                        photoIndex={photo.photoIndex}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-semibold text-stone-900 truncate">

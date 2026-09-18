@@ -4,6 +4,6 @@
 // 2.jpeg (or 2.jpg)
 // 3.jpeg (or 3.jpg)
 // ...
-// 30.jpeg
+// 60.jpeg
 //
-// The app will automatically display your uploaded photos across the scrapbook gallery, photo grid, and memory timeline.
+// The app will automatically display your uploaded photos across the scrapbook gallery, polaroid albums, cinema slideshow, and memory timeline.
